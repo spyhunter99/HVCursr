@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<XML_DIZ_INFO>
+<MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>1.10</MASTER_PAD_VERSION>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+</MASTER_PAD_VERSION_INFO>
+<Company_Info>
+        <Company_Name>W. J. Harnden, Jr.</Company_Name>
+        <Address_1 />
+        <Address_2 />
+        <City_Town />
+        <State_Province />
+        <Zip_Postal_Code />
+        <Country />
+        <Company_WebSite_URL>http://joescursors.tripod.com/index.html</Company_WebSite_URL>
+<Contact_Info>
+        <Author_First_Name>W. J.</Author_First_Name>
+        <Author_Last_Name>Harnden, Jr.</Author_Last_Name>
+        <Author_Email>joescursors@yahoo.com</Author_Email>
+        <Contact_First_Name>W. J.</Contact_First_Name>
+        <Contact_Last_Name>Harnden, Jr.</Contact_Last_Name>
+        <Contact_Email>joescursors@yahoo.com</Contact_Email>
+    </Contact_Info>
+<Support_Info>
+        <Sales_Email>joescursors@yahoo.com</Sales_Email>
+        <Support_Email>joescursors@yahoo.com</Support_Email>
+        <General_Email>joescursors@yahoo.com</General_Email>
+        <Sales_Phone />
+        <Support_Phone />
+        <General_Phone />
+        <Fax_Phone />
+    </Support_Info>
+</Company_Info>
+<Program_Info>
+        <Program_Name>High Visibility Animated Cursors</Program_Name>
+        <Program_Version>2.0c</Program_Version>
+        <Program_Release_Month>08</Program_Release_Month>
+        <Program_Release_Day>11</Program_Release_Day>
+        <Program_Release_Year>2001</Program_Release_Year>
+        <Program_Cost_Dollars>0</Program_Cost_Dollars>
+        <Program_Cost_Other />
+        <Program_Type>Freeware</Program_Type>
+        <Program_Release_Status>Minor Update</Program_Release_Status>
+        <Program_Install_Support>Install and Uninstall</Program_Install_Support>
+        <Program_OS_Support>Win95,Win98,WinME,WinNT 3.x,WinNT 4.x,Windows2000</Program_OS_Support>
+        <Program_Language>English</Program_Language>
+        <Program_Change_Info>web site update</Program_Change_Info>
+        <Program_System_Requirements>Windows 95/98/ME/NT/2000</Program_System_Requirements>
+        <Program_Specific_Category>Utilities</Program_Specific_Category>
+        <Program_Categories>Desktop Tools, Cursors, Animated Cursors, Children, Handicapped, Themes</Program_Categories>
+<File_Info>
+        <Filename_Versioned>HVCur20.zip</Filename_Versioned>
+        <Filename_Previous />
+        <Filename_Generic>HVCursr.zip</Filename_Generic>
+        <Filename_Long />
+        <File_Size_Bytes>237000</File_Size_Bytes>
+        <File_Size_K>237</File_Size_K>
+        <File_Size_MB>0.237</File_Size_MB>
+    </File_Info>
+<Expire_Info>
+        <Has_Expire_Info>N</Has_Expire_Info>
+        <Expire_Count />
+        <Expire_Based_On>Days</Expire_Based_On>
+        <Expire_Other_Info />
+        <Expire_Month />
+        <Expire_Day />
+        <Expire_Year />
+    </Expire_Info>
+        <Includes_JAVA_VM>N</Includes_JAVA_VM>
+        <Includes_VB_Runtime>N</Includes_VB_Runtime>
+        <Includes_DirectX>N</Includes_DirectX>
+</Program_Info>
+<Program_Descriptions>
+<English>
+        <Keywords>cursor, cursors, animated, children, visually impaired, handicapped, theme, mouse, pointer, desktop, kids</Keywords>
+        <Char_Desc_45>High Visibility Animated Cursors Collection.</Char_Desc_45>
+        <Char_Desc_80>A collection of bright, colorful High Visibility Animated Cursors for Windows.</Char_Desc_80>
+        <Char_Desc_250>A collection of bright, colorful High Visibility Animated Cursors for Windows 95/98/ME/NT/2000.  There are 257 cursors in the set. The cursors are copyrighted but free for personal use.</Char_Desc_250>
+        <Char_Desc_450>A collection of large and brightly colored animated cursors for Windows 95/98/ME or NT/2000. They provide those with laptops, children, or limited visual acuity, cursors big enough to easily find, but still interesting to look at. There are 10 different colored cursor schemes in the set, for a total of 257 cursors. They provide a wide selection of replacements for all the mouse pointers. These cursors are copyrighted but free for personal use.</Char_Desc_450>
+        <Char_Desc_2000>A collection of large and brightly colored animated cursors for Windows 95/98/ME or NT/2000. They provide those with laptops, children, or limited visual acuity, cursors big enough to easily find, but still interesting to look at. There are 10 different colored cursor schemes in the set, for a total of 257 cursors. They provide a wide selection of replacements for all the standard Windows mouse pointers. These cursors are copyrighted but free for personal use.</Char_Desc_2000>
+</English>
+</Program_Descriptions>
+<Web_Info>
+<Application_URLs>
+        <Application_Info_URL>http://joescursors.tripod.com/HVCurPg.htm</Application_Info_URL>
+        <Application_Order_URL />
+        <Application_Screenshot_URL>http://joescursors.tripod.com/pad/HVScrn.gif</Application_Screenshot_URL>
+        <Application_Icon_URL>http://joescursors.tripod.com/pad/HVAniC.gif</Application_Icon_URL>
+        <Application_XML_File_URL>http://joescursors.tripod.com/pad/HVCursr.xml</Application_XML_File_URL>
+    </Application_URLs>
+<Download_URLs>
+        <Primary_Download_URL>http://joescursors.tripod.com/HVCurPg.htm</Primary_Download_URL>
+        <Secondary_Download_URL>http://www.winsite.com/bin/Info?3500000036153</Secondary_Download_URL>
+        <Additional_Download_URL_1 />
+        <Additional_Download_URL_2 />
+    </Download_URLs>
+</Web_Info>
+<Permissions>
+        <Distribution_Permissions>These files are copyrighted and being released as freeware for personal, non-profit use only. If you wish to use ANY of these cursors for ANY OTHER USE than the ones stated above, including use in themes or collections, send a request for permission via email to joescursors@yahoo.com.</Distribution_Permissions>
+        <EULA>These files are copyrighted and being released as freeware for personal, non-profit use only. If you wish to use ANY of these cursors for ANY OTHER USE than the ones stated above, including use in themes or collections, send a request for permission via email to joescursors@yahoo.com.</EULA>
+</Permissions>
+<ASP>
+    <ASP_FORM>Y</ASP_FORM>
+    <ASP_Member>N</ASP_Member>
+    <ASP_Member_Number />
+</ASP>
+<MSN>
+    <MSN_FORM>Y</MSN_FORM>
+    <MSN_IS_32bit>Y</MSN_IS_32bit>
+</MSN>
+<Simtel>
+    <Simtel_Email>joescursors@yahoo.com</Simtel_Email>
+    <Simtel_FORM>Y</Simtel_FORM>
+    <Simtel_DOS_Category>Select - MS-DOS Platform</Simtel_DOS_Category>
+    <Simtel_Win31_Category>Select - Win3 Platform</Simtel_Win31_Category>
+    <Simtel_WinXX_Category>Graphics - cursors Animated Cursors for Win95</Simtel_WinXX_Category>
+    <Simtel_Category>Utilities - Desktop</Simtel_Category>
+    <SIMTEL_FORM_VER>1.03 04/09/2001</SIMTEL_FORM_VER>
+</Simtel>
+</XML_DIZ_INFO>

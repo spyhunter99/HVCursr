@@ -1,10 +1,4 @@
-
-# Note
-
-I'm at not the author. Storing it here on github since the original website has been deleted. And this is awesome.
-
-
-# High Visibility Animated Cursors Version 2.0c
+High Visibility Animated Cursors Version 2.0c
 
 Copyright 1999-2001 by W. J. Harnden, Jr., all rights reserved. For personal use only, all other use, including themes and collections, require permission from the copyright holder (email joescursors@yahoo.com).
 

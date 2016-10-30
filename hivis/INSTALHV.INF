@@ -1,0 +1,760 @@
+; Copyright (c) 1999-2001 by W. J. Harnden, Jr.
+;
+; Registry entries for High Visibility Animated Cursors schemes
+
+[version]
+signature="$CHICAGO$"
+SetupClass=PLUSPACK
+
+[DestinationDirs]
+cursors.CopyFiles       = 25,Cursors\HIVIS
+cursor_reg.CopyFiles    = 17
+
+[cursor_reg.CopyFiles]
+INSTALHV.INF
+
+
+[DefaultInstall]
+CopyFiles      = cursors.CopyFiles, cursor_reg.CopyFiles
+AddReg         = cursors.AddReg, cursors.install.reg
+
+OptionDesc     = %Cursors_DESC%
+Tip            = %Cursors_TIP%
+Parent         = AccessTop
+InstallType    = 0 ;Manual only
+IconIndex      = 45  ;Windows Logo mini-icon for dialogs
+Uninstall      = cursors_remove
+
+[DefaultInstall.NT]
+CopyFiles      = cursors.CopyFiles, cursor_reg.CopyFiles
+AddReg         = cursors.AddReg, cursors.install.reg.NT
+
+OptionDesc     = %Cursors_DESC%
+Tip            = %Cursors_TIP%
+Parent         = AccessTop
+InstallType    = 0 ;Manual only
+IconIndex      = 45  ;Windows Logo mini-icon for dialogs
+Uninstall      = cursors_remove
+
+[cursors_remove]
+DelFiles       = cursors.CopyFiles, cursor_reg.CopyFiles
+DelReg         = cursors.AddReg, cursors.remove.reg
+
+;; ---------------------------------------------------------------------
+;; Cursors install section
+
+[cursors.install.reg]
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\HiVisCursors,"DisplayName",,"%Cursors_DESC%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\HiVisCursors,"UninstallString",,"RunDll setupx.dll,InstallHinfSection cursors_remove 4 INSTALHV.INF"
+
+[cursors.install.reg.NT]
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\HiVisCursors,"DisplayName",,"%Cursors_DESC%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\HiVisCursors,"UninstallString",,"RunDll32 syssetup.dll,SetupInfObjectInstallAction cursors_remove 4 INSTALHV.INF"
+
+[cursors.remove.reg]
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\HiVisCursors
+
+[cursors.AddReg]
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVB%",,"%25%%B0%,%25%%B1%,%25%%B2%,%25%%B3%,%25%%B4%,%25%%B5%,%25%%B6%,%25%%B7%,%25%%B8%,%25%%B9%,%25%%BA%,%25%%BB%,%25%%BC%,%25%%BD%,%25%%BE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVG%",,"%25%%G0%,%25%%G1%,%25%%G2%,%25%%G3%,%25%%G4%,%25%%G5%,%25%%G6%,%25%%G7%,%25%%G8%,%25%%G9%,%25%%GA%,%25%%GB%,%25%%GC%,%25%%GD%,%25%%GE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVL%",,"%25%%L0%,%25%%L1%,%25%%L2%,%25%%L3%,%25%%L4%,%25%%L5%,%25%%L6%,%25%%L7%,%25%%L8%,%25%%L9%,%25%%LA%,%25%%LB%,%25%%LC%,%25%%LD%,%25%%LE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVP%",,"%25%%P0%,%25%%P1%,%25%%P2%,%25%%P3%,%25%%P4%,%25%%P5%,%25%%P6%,%25%%P7%,%25%%P8%,%25%%P9%,%25%%PA%,%25%%PB%,%25%%PC%,%25%%PD%,%25%%PE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVR%",,"%25%%R0%,%25%%R1%,%25%%R2%,%25%%R3%,%25%%R4%,%25%%R5%,%25%%R6%,%25%%R7%,%25%%R8%,%25%%R9%,%25%%RA%,%25%%RB%,%25%%RC%,%25%%RD%,%25%%RE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVY%",,"%25%%Y0%,%25%%Y1%,%25%%Y2%,%25%%Y3%,%25%%Y4%,%25%%Y5%,%25%%Y6%,%25%%Y7%,%25%%Y8%,%25%%Y9%,%25%%YA%,%25%%YB%,%25%%YC%,%25%%YD%,%25%%YE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVRN%",,"%25%%RN0%,%25%%RN1%,%25%%RN2%,%25%%RN3%,%25%%RN4%,%25%%RN5%,%25%%RN6%,%25%%RN7%,%25%%RN8%,%25%%RN9%,%25%%RNA%,%25%%RNB%,%25%%RNC%,%25%%RND%,%25%%RNE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVI%",,"%25%%I0%,%25%%I1%,%25%%I2%,%25%%I3%,%25%%I4%,%25%%I5%,%25%%I6%,%25%%I7%,%25%%I8%,%25%%I9%,%25%%IA%,%25%%IB%,%25%%IC%,%25%%ID%,%25%%IE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVW%",,"%25%%W0%,%25%%W1%,%25%%W2%,%25%%W3%,%25%%W4%,%25%%W5%,%25%%W6%,%25%%W7%,%25%%W8%,%25%%W9%,%25%%WA%,%25%%WB%,%25%%WC%,%25%%WD%,%25%%WE%"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeHVK%",,"%25%%K0%,%25%%K1%,%25%%K2%,%25%%K3%,%25%%K4%,%25%%K5%,%25%%K6%,%25%%K7%,%25%%K8%,%25%%K9%,%25%%KA%,%25%%KB%,%25%%KC%,%25%%KD%,%25%%KE%"
+
+[cursors.CopyFiles]
+hvbalt.ani
+hvbapps1.ani
+hvbapps2.ani
+hvbapps3.ani
+hvbapps4.ani
+hvbapps5.ani
+hvbarrow.cur
+hvbbeam.cur
+hvbbusy1.ani
+hvbbusy2.ani
+hvbbusy3.ani
+hvbbusy4.ani
+hvbbusy5.ani
+hvbbusy6.ani
+hvbcross.cur
+hvbdiagl.ani
+hvbdiagr.ani
+hvbhelp.ani
+hvbhorz.ani
+hvblink.ani
+hvblink.cur
+hvbmove.ani
+hvbno.ani
+hvbpen.ani
+hvbpen2.ani
+hvbvert.ani
+hvgalt.ani
+hvgapps1.ani
+hvgapps2.ani
+hvgapps3.ani
+hvgapps4.ani
+hvgapps5.ani
+hvgarrow.cur
+hvgbeam.cur
+hvgbusy1.ani
+hvgbusy2.ani
+hvgbusy3.ani
+hvgbusy4.ani
+hvgbusy5.ani
+hvgbusy6.ani
+hvgcross.cur
+hvgdiagl.ani
+hvgdiagr.ani
+hvghelp.ani
+hvghorz.ani
+hvglink.ani
+hvglink.cur
+hvgmove.ani
+hvgno.ani
+hvgpen.ani
+hvgpen2.ani
+hvgvert.ani
+hvialt.ani
+hviapps1.ani
+hviapps2.ani
+hviapps3.ani
+hviapps4.ani
+hviapps5.ani
+hviarrow.cur
+hvibeam.cur
+hvibusy1.ani
+hvibusy2.ani
+hvibusy3.ani
+hvibusy4.ani
+hvibusy5.ani
+hvibusy6.ani
+hvicross.cur
+hvidiagl.ani
+hvidiagr.ani
+hvihelp.ani
+hvihorz.ani
+hvilink.ani
+hvilink.cur
+hvimove.ani
+hvino.ani
+hvipen.ani
+hvipen2.ani
+hvivert.ani
+hvkalt.ani
+hvkapps1.ani
+hvkapps2.ani
+hvkapps3.ani
+hvkapps4.ani
+hvkapps5.ani
+hvkarrow.cur
+hvkbeam.cur
+hvkbusy1.ani
+hvkbusy2.ani
+hvkbusy3.ani
+hvkbusy4.ani
+hvkbusy5.ani
+hvkbusy6.ani
+hvkcross.cur
+hvkdiagl.ani
+hvkdiagr.ani
+hvkhelp.ani
+hvkhorz.ani
+hvklink.ani
+hvklink.cur
+hvkmove.ani
+hvkno.ani
+hvkpen.ani
+hvkpen2.ani
+hvkvert.ani
+hvlalt.ani
+hvlapps1.ani
+hvlapps2.ani
+hvlapps3.ani
+hvlapps4.ani
+hvlapps5.ani
+hvlarrow.cur
+hvlbeam.cur
+hvlbusy1.ani
+hvlbusy2.ani
+hvlbusy3.ani
+hvlbusy4.ani
+hvlbusy5.ani
+hvlbusy6.ani
+hvlcross.cur
+hvldiagl.ani
+hvldiagr.ani
+hvlhelp.ani
+hvlhorz.ani
+hvllink.ani
+hvllink.cur
+hvlmove.ani
+hvlno.ani
+hvlpen.ani
+hvlpen2.ani
+hvlvert.ani
+hvpalt.ani
+hvpapps1.ani
+hvpapps2.ani
+hvpapps3.ani
+hvpapps4.ani
+hvpapps5.ani
+hvparrow.cur
+hvpbeam.cur
+hvpbusy1.ani
+hvpbusy2.ani
+hvpbusy3.ani
+hvpbusy4.ani
+hvpbusy5.ani
+hvpbusy6.ani
+hvpcross.cur
+hvpdiagl.ani
+hvpdiagr.ani
+hvphelp.ani
+hvphorz.ani
+hvplink.ani
+hvplink.cur
+hvpmove.ani
+hvpno.ani
+hvppen.ani
+hvppen2.ani
+hvpvert.ani
+hvralt.ani
+hvrapps1.ani
+hvrapps2.ani
+hvrapps3.ani
+hvrapps4.ani
+hvrapps5.ani
+hvrarrow.cur
+hvrbeam.cur
+hvrbusy1.ani
+hvrbusy2.ani
+hvrbusy3.ani
+hvrbusy4.ani
+hvrbusy5.ani
+hvrbusy6.ani
+hvrcross.cur
+hvrdiagl.ani
+hvrdiagr.ani
+hvrhelp.ani
+hvrhorz.ani
+hvrlink.ani
+hvrlink.cur
+hvrmove.ani
+hvrnalt.ani
+hvrnapp1.ani
+hvrnapp2.ani
+hvrnapp3.ani
+hvrnapp4.ani
+hvrnarrw.ani
+hvrnbeam.ani
+hvrnbsy1.ani
+hvrnbsy2.ani
+hvrnbsy3.ani
+hvrnbsy4.ani
+hvrnbsy5.ani
+hvrncros.ani
+hvrndial.ani
+hvrndiar.ani
+hvrnhelp.ani
+hvrnhorz.ani
+hvrnlink.ani
+hvrnmove.ani
+hvrnno.ani
+hvrno.ani
+hvrnpen.ani
+hvrnpen2.ani
+hvrnvert.ani
+hvrpen.ani
+hvrpen2.ani
+hvrvert.ani
+hvwalt.ani
+hvwapps1.ani
+hvwapps2.ani
+hvwapps3.ani
+hvwapps4.ani
+hvwapps5.ani
+hvwarrow.cur
+hvwbeam.cur
+hvwbusy1.ani
+hvwbusy2.ani
+hvwbusy3.ani
+hvwbusy4.ani
+hvwbusy5.ani
+hvwbusy6.ani
+hvwcross.cur
+hvwdiagl.ani
+hvwdiagr.ani
+hvwhelp.ani
+hvwhorz.ani
+hvwlink.ani
+hvwlink.cur
+hvwmove.ani
+hvwno.ani
+hvwpen.ani
+hvwpen2.ani
+hvwvert.ani
+hvyalt.ani
+hvyapps1.ani
+hvyapps2.ani
+hvyapps3.ani
+hvyapps4.ani
+hvyapps5.ani
+hvyarrow.cur
+hvybeam.cur
+hvybusy1.ani
+hvybusy2.ani
+hvybusy3.ani
+hvybusy4.ani
+hvybusy5.ani
+hvybusy6.ani
+hvycross.cur
+hvydiagl.ani
+hvydiagr.ani
+hvyhelp.ani
+hvyhorz.ani
+hvylink.ani
+hvylink.cur
+hvymove.ani
+hvyno.ani
+hvypen.ani
+hvypen2.ani
+hvyvert.ani
+readme.txt
+
+[Strings]
+; Used to keep the line length above to a minimum
+B0              = "\CURSORS\HIVIS\HVBARROW.CUR"
+B1              = "\CURSORS\HIVIS\HVBHELP.ANI"
+B2              = "\CURSORS\HIVIS\HVBAPPS1.ANI"
+B3              = "\CURSORS\HIVIS\HVBBUSY1.ANI"
+B4              = "\CURSORS\HIVIS\HVBCROSS.CUR"
+B5              = "\CURSORS\HIVIS\HVBBEAM.CUR"
+B6              = "\CURSORS\HIVIS\HVBPEN2.ANI"
+B7              = "\CURSORS\HIVIS\HVBNO.ANI"
+B8              = "\CURSORS\HIVIS\HVBVERT.ANI"
+B9              = "\CURSORS\HIVIS\HVBHORZ.ANI"
+BA              = "\CURSORS\HIVIS\HVBDIAGL.ANI"
+BB              = "\CURSORS\HIVIS\HVBDIAGR.ANI"
+BC              = "\CURSORS\HIVIS\HVBMOVE.ANI"
+BD              = "\CURSORS\HIVIS\HVBALT.ANI"
+BE              = "\CURSORS\HIVIS\HVBLINK.ANI"
+G0              = "\CURSORS\HIVIS\HVGARROW.CUR"
+G1              = "\CURSORS\HIVIS\HVGHELP.ANI"
+G2              = "\CURSORS\HIVIS\HVGAPPS1.ANI"
+G3              = "\CURSORS\HIVIS\HVGBUSY1.ANI"
+G4              = "\CURSORS\HIVIS\HVGCROSS.CUR"
+G5              = "\CURSORS\HIVIS\HVGBEAM.CUR"
+G6              = "\CURSORS\HIVIS\HVGPEN2.ANI"
+G7              = "\CURSORS\HIVIS\HVGNO.ANI"
+G8              = "\CURSORS\HIVIS\HVGVERT.ANI"
+G9              = "\CURSORS\HIVIS\HVGHORZ.ANI"
+GA              = "\CURSORS\HIVIS\HVGDIAGL.ANI"
+GB              = "\CURSORS\HIVIS\HVGDIAGR.ANI"
+GC              = "\CURSORS\HIVIS\HVGMOVE.ANI"
+GD              = "\CURSORS\HIVIS\HVGALT.ANI"
+GE              = "\CURSORS\HIVIS\HVGLINK.ANI"
+L0              = "\CURSORS\HIVIS\HVLARROW.CUR"
+L1              = "\CURSORS\HIVIS\HVLHELP.ANI"
+L2              = "\CURSORS\HIVIS\HVLAPPS1.ANI"
+L3              = "\CURSORS\HIVIS\HVLBUSY1.ANI"
+L4              = "\CURSORS\HIVIS\HVLCROSS.CUR"
+L5              = "\CURSORS\HIVIS\HVLBEAM.CUR"
+L6              = "\CURSORS\HIVIS\HVLPEN2.ANI"
+L7              = "\CURSORS\HIVIS\HVLNO.ANI"
+L8              = "\CURSORS\HIVIS\HVLVERT.ANI"
+L9              = "\CURSORS\HIVIS\HVLHORZ.ANI"
+LA              = "\CURSORS\HIVIS\HVLDIAGL.ANI"
+LB              = "\CURSORS\HIVIS\HVLDIAGR.ANI"
+LC              = "\CURSORS\HIVIS\HVLMOVE.ANI"
+LD              = "\CURSORS\HIVIS\HVLALT.ANI"
+LE              = "\CURSORS\HIVIS\HVLLINK.ANI"
+P0              = "\CURSORS\HIVIS\HVPARROW.CUR"
+P1              = "\CURSORS\HIVIS\HVPHELP.ANI"
+P2              = "\CURSORS\HIVIS\HVPAPPS1.ANI"
+P3              = "\CURSORS\HIVIS\HVPBUSY1.ANI"
+P4              = "\CURSORS\HIVIS\HVPCROSS.CUR"
+P5              = "\CURSORS\HIVIS\HVPBEAM.CUR"
+P6              = "\CURSORS\HIVIS\HVPPEN2.ANI"
+P7              = "\CURSORS\HIVIS\HVPNO.ANI"
+P8              = "\CURSORS\HIVIS\HVPVERT.ANI"
+P9              = "\CURSORS\HIVIS\HVPHORZ.ANI"
+PA              = "\CURSORS\HIVIS\HVPDIAGL.ANI"
+PB              = "\CURSORS\HIVIS\HVPDIAGR.ANI"
+PC              = "\CURSORS\HIVIS\HVPMOVE.ANI"
+PD              = "\CURSORS\HIVIS\HVPALT.ANI"
+PE              = "\CURSORS\HIVIS\HVPLINK.ANI"
+R0              = "\CURSORS\HIVIS\HVRARROW.CUR"
+R1              = "\CURSORS\HIVIS\HVRHELP.ANI"
+R2              = "\CURSORS\HIVIS\HVRAPPS1.ANI"
+R3              = "\CURSORS\HIVIS\HVRBUSY1.ANI"
+R4              = "\CURSORS\HIVIS\HVRCROSS.CUR"
+R5              = "\CURSORS\HIVIS\HVRBEAM.CUR"
+R6              = "\CURSORS\HIVIS\HVRPEN2.ANI"
+R7              = "\CURSORS\HIVIS\HVRNO.ANI"
+R8              = "\CURSORS\HIVIS\HVRVERT.ANI"
+R9              = "\CURSORS\HIVIS\HVRHORZ.ANI"
+RA              = "\CURSORS\HIVIS\HVRDIAGL.ANI"
+RB              = "\CURSORS\HIVIS\HVRDIAGR.ANI"
+RC              = "\CURSORS\HIVIS\HVRMOVE.ANI"
+RD              = "\CURSORS\HIVIS\HVRALT.ANI"
+RE              = "\CURSORS\HIVIS\HVRLINK.ANI"
+Y0              = "\CURSORS\HIVIS\HVYARROW.CUR"
+Y1              = "\CURSORS\HIVIS\HVYHELP.ANI"
+Y2              = "\CURSORS\HIVIS\HVYAPPS1.ANI"
+Y3              = "\CURSORS\HIVIS\HVYBUSY1.ANI"
+Y4              = "\CURSORS\HIVIS\HVYCROSS.CUR"
+Y5              = "\CURSORS\HIVIS\HVYBEAM.CUR"
+Y6              = "\CURSORS\HIVIS\HVYPEN2.ANI"
+Y7              = "\CURSORS\HIVIS\HVYNO.ANI"
+Y8              = "\CURSORS\HIVIS\HVYVERT.ANI"
+Y9              = "\CURSORS\HIVIS\HVYHORZ.ANI"
+YA              = "\CURSORS\HIVIS\HVYDIAGL.ANI"
+YB              = "\CURSORS\HIVIS\HVYDIAGR.ANI"
+YC              = "\CURSORS\HIVIS\HVYMOVE.ANI"
+YD              = "\CURSORS\HIVIS\HVYALT.ANI"
+YE              = "\CURSORS\HIVIS\HVYLINK.ANI"
+RN0             = "\CURSORS\HIVIS\HVRNARRW.ANI"
+RN1             = "\CURSORS\HIVIS\HVRNHELP.ANI"
+RN2             = "\CURSORS\HIVIS\HVRNAPP1.ANI"
+RN3             = "\CURSORS\HIVIS\HVRNBSY1.ANI"
+RN4             = "\CURSORS\HIVIS\HVRNCROS.ANI"
+RN5             = "\CURSORS\HIVIS\HVRNBEAM.ANI"
+RN6             = "\CURSORS\HIVIS\HVRNPEN2.ANI"
+RN7             = "\CURSORS\HIVIS\HVRNNO.ANI"
+RN8             = "\CURSORS\HIVIS\HVRNVERT.ANI"
+RN9             = "\CURSORS\HIVIS\HVRNHORZ.ANI"
+RNA             = "\CURSORS\HIVIS\HVRNDIAL.ANI"
+RNB             = "\CURSORS\HIVIS\HVRNDIAR.ANI"
+RNC             = "\CURSORS\HIVIS\HVRNMOVE.ANI"
+RND             = "\CURSORS\HIVIS\HVRNALT.ANI"
+RNE             = "\CURSORS\HIVIS\HVRNLINK.ANI"
+I0              = "\CURSORS\HIVIS\HVIARROW.CUR"
+I1              = "\CURSORS\HIVIS\HVIHELP.ANI"
+I2              = "\CURSORS\HIVIS\HVIAPPS1.ANI"
+I3              = "\CURSORS\HIVIS\HVIBUSY1.ANI"
+I4              = "\CURSORS\HIVIS\HVICROSS.CUR"
+I5              = "\CURSORS\HIVIS\HVIBEAM.CUR"
+I6              = "\CURSORS\HIVIS\HVIPEN2.ANI"
+I7              = "\CURSORS\HIVIS\HVINO.ANI"
+I8              = "\CURSORS\HIVIS\HVIVERT.ANI"
+I9              = "\CURSORS\HIVIS\HVIHORZ.ANI"
+IA              = "\CURSORS\HIVIS\HVIDIAGL.ANI"
+IB              = "\CURSORS\HIVIS\HVIDIAGR.ANI"
+IC              = "\CURSORS\HIVIS\HVIMOVE.ANI"
+ID              = "\CURSORS\HIVIS\HVIALT.ANI"
+IE              = "\CURSORS\HIVIS\HVILINK.ANI"
+W0              = "\CURSORS\HIVIS\HVWARROW.CUR"
+W1              = "\CURSORS\HIVIS\HVWHELP.ANI"
+W2              = "\CURSORS\HIVIS\HVWAPPS1.ANI"
+W3              = "\CURSORS\HIVIS\HVWBUSY1.ANI"
+W4              = "\CURSORS\HIVIS\HVWCROSS.CUR"
+W5              = "\CURSORS\HIVIS\HVWBEAM.CUR"
+W6              = "\CURSORS\HIVIS\HVWPEN2.ANI"
+W7              = "\CURSORS\HIVIS\HVWNO.ANI"
+W8              = "\CURSORS\HIVIS\HVWVERT.ANI"
+W9              = "\CURSORS\HIVIS\HVWHORZ.ANI"
+WA              = "\CURSORS\HIVIS\HVWDIAGL.ANI"
+WB              = "\CURSORS\HIVIS\HVWDIAGR.ANI"
+WC              = "\CURSORS\HIVIS\HVWMOVE.ANI"
+WD              = "\CURSORS\HIVIS\HVWALT.ANI"
+WE              = "\CURSORS\HIVIS\HVWLINK.ANI"
+K0              = "\CURSORS\HIVIS\HVKARROW.CUR"
+K1              = "\CURSORS\HIVIS\HVKHELP.ANI"
+K2              = "\CURSORS\HIVIS\HVKAPPS1.ANI"
+K3              = "\CURSORS\HIVIS\HVKBUSY1.ANI"
+K4              = "\CURSORS\HIVIS\HVKCROSS.CUR"
+K5              = "\CURSORS\HIVIS\HVKBEAM.CUR"
+K6              = "\CURSORS\HIVIS\HVKPEN2.ANI"
+K7              = "\CURSORS\HIVIS\HVKNO.ANI"
+K8              = "\CURSORS\HIVIS\HVKVERT.ANI"
+K9              = "\CURSORS\HIVIS\HVKHORZ.ANI"
+KA              = "\CURSORS\HIVIS\HVKDIAGL.ANI"
+KB              = "\CURSORS\HIVIS\HVKDIAGR.ANI"
+KC              = "\CURSORS\HIVIS\HVKMOVE.ANI"
+KD              = "\CURSORS\HIVIS\HVKALT.ANI"
+KE              = "\CURSORS\HIVIS\HVKLINK.ANI"
+
+; Localizable strings
+SchemeHVB              = "High Visibility Blue Animated"
+SchemeHVG              = "High Visibility Green Animated"
+SchemeHVL              = "High Visibility Lt Blue Animated"
+SchemeHVP              = "High Visibility Purple Animated"
+SchemeHVR              = "High Visibility Red Animated"
+SchemeHVY              = "High Visibility Yellow Animated"
+SchemeHVRN             = "High Visibility Rainbow Animated"
+SchemeHVI              = "High Visibility Inverse Animated"
+SchemeHVW              = "High Visibility White Animated"
+SchemeHVK              = "High Visibility Black Animated"
+Cursors_DESC           = "High Visibility Animated Cursors"
+Cursors_TIP            = "A collection of large, brightly colored animated mouse pointers"
+
+Disk_1_Desc     = "Downloaded Files"
+
+[SourceDisksNames]
+1  = %Disk_1_Desc%,\Temp\hivis,0
+
+[SourceDisksFiles]
+hvbalt.ani	=1
+hvbapps1.ani	=1
+hvbapps2.ani	=1
+hvbapps3.ani	=1
+hvbapps4.ani	=1
+hvbapps5.ani	=1
+hvbarrow.cur	=1
+hvbbeam.cur	=1
+hvbbusy1.ani	=1
+hvbbusy2.ani	=1
+hvbbusy3.ani	=1
+hvbbusy4.ani	=1
+hvbbusy5.ani	=1
+hvbbusy6.ani	=1
+hvbcross.cur	=1
+hvbdiagl.ani	=1
+hvbdiagr.ani	=1
+hvbhelp.ani	=1
+hvbhorz.ani	=1
+hvblink.ani	=1
+hvblink.cur	=1
+hvbmove.ani	=1
+hvbno.ani	=1
+hvbpen.ani	=1
+hvbpen2.ani	=1
+hvbvert.ani	=1
+hvgalt.ani	=1
+hvgapps1.ani	=1
+hvgapps2.ani	=1
+hvgapps3.ani	=1
+hvgapps4.ani	=1
+hvgapps5.ani	=1
+hvgarrow.cur	=1
+hvgbeam.cur	=1
+hvgbusy1.ani	=1
+hvgbusy2.ani	=1
+hvgbusy3.ani	=1
+hvgbusy4.ani	=1
+hvgbusy5.ani	=1
+hvgbusy6.ani	=1
+hvgcross.cur	=1
+hvgdiagl.ani	=1
+hvgdiagr.ani	=1
+hvghelp.ani	=1
+hvghorz.ani	=1
+hvglink.ani	=1
+hvglink.cur	=1
+hvgmove.ani	=1
+hvgno.ani	=1
+hvgpen.ani	=1
+hvgpen2.ani	=1
+hvgvert.ani	=1
+hvialt.ani	=1
+hviapps1.ani	=1
+hviapps2.ani	=1
+hviapps3.ani	=1
+hviapps4.ani	=1
+hviapps5.ani	=1
+hviarrow.cur	=1
+hvibeam.cur	=1
+hvibusy1.ani	=1
+hvibusy2.ani	=1
+hvibusy3.ani	=1
+hvibusy4.ani	=1
+hvibusy5.ani	=1
+hvibusy6.ani	=1
+hvicross.cur	=1
+hvidiagl.ani	=1
+hvidiagr.ani	=1
+hvihelp.ani	=1
+hvihorz.ani	=1
+hvilink.ani	=1
+hvilink.cur	=1
+hvimove.ani	=1
+hvino.ani	=1
+hvipen.ani	=1
+hvipen2.ani	=1
+hvivert.ani	=1
+hvkalt.ani	=1
+hvkapps1.ani	=1
+hvkapps2.ani	=1
+hvkapps3.ani	=1
+hvkapps4.ani	=1
+hvkapps5.ani	=1
+hvkarrow.cur	=1
+hvkbeam.cur	=1
+hvkbusy1.ani	=1
+hvkbusy2.ani	=1
+hvkbusy3.ani	=1
+hvkbusy4.ani	=1
+hvkbusy5.ani	=1
+hvkbusy6.ani	=1
+hvkcross.cur	=1
+hvkdiagl.ani	=1
+hvkdiagr.ani	=1
+hvkhelp.ani	=1
+hvkhorz.ani	=1
+hvklink.ani	=1
+hvklink.cur	=1
+hvkmove.ani	=1
+hvkno.ani	=1
+hvkpen.ani	=1
+hvkpen2.ani	=1
+hvkvert.ani	=1
+hvlalt.ani	=1
+hvlapps1.ani	=1
+hvlapps2.ani	=1
+hvlapps3.ani	=1
+hvlapps4.ani	=1
+hvlapps5.ani	=1
+hvlarrow.cur	=1
+hvlbeam.cur	=1
+hvlbusy1.ani	=1
+hvlbusy2.ani	=1
+hvlbusy3.ani	=1
+hvlbusy4.ani	=1
+hvlbusy5.ani	=1
+hvlbusy6.ani	=1
+hvlcross.cur	=1
+hvldiagl.ani	=1
+hvldiagr.ani	=1
+hvlhelp.ani	=1
+hvlhorz.ani	=1
+hvllink.ani	=1
+hvllink.cur	=1
+hvlmove.ani	=1
+hvlno.ani	=1
+hvlpen.ani	=1
+hvlpen2.ani	=1
+hvlvert.ani	=1
+hvpalt.ani	=1
+hvpapps1.ani	=1
+hvpapps2.ani	=1
+hvpapps3.ani	=1
+hvpapps4.ani	=1
+hvpapps5.ani	=1
+hvparrow.cur	=1
+hvpbeam.cur	=1
+hvpbusy1.ani	=1
+hvpbusy2.ani	=1
+hvpbusy3.ani	=1
+hvpbusy4.ani	=1
+hvpbusy5.ani	=1
+hvpbusy6.ani	=1
+hvpcross.cur	=1
+hvpdiagl.ani	=1
+hvpdiagr.ani	=1
+hvphelp.ani	=1
+hvphorz.ani	=1
+hvplink.ani	=1
+hvplink.cur	=1
+hvpmove.ani	=1
+hvpno.ani	=1
+hvppen.ani	=1
+hvppen2.ani	=1
+hvpvert.ani	=1
+hvralt.ani	=1
+hvrapps1.ani	=1
+hvrapps2.ani	=1
+hvrapps3.ani	=1
+hvrapps4.ani	=1
+hvrapps5.ani	=1
+hvrarrow.cur	=1
+hvrbeam.cur	=1
+hvrbusy1.ani	=1
+hvrbusy2.ani	=1
+hvrbusy3.ani	=1
+hvrbusy4.ani	=1
+hvrbusy5.ani	=1
+hvrbusy6.ani	=1
+hvrcross.cur	=1
+hvrdiagl.ani	=1
+hvrdiagr.ani	=1
+hvrhelp.ani	=1
+hvrhorz.ani	=1
+hvrlink.ani	=1
+hvrlink.cur	=1
+hvrmove.ani	=1
+hvrnalt.ani	=1
+hvrnapp1.ani	=1
+hvrnapp2.ani	=1
+hvrnapp3.ani	=1
+hvrnapp4.ani	=1
+hvrnarrw.ani	=1
+hvrnbeam.ani	=1
+hvrnbsy1.ani	=1
+hvrnbsy2.ani	=1
+hvrnbsy3.ani	=1
+hvrnbsy4.ani	=1
+hvrnbsy5.ani	=1
+hvrncros.ani	=1
+hvrndial.ani	=1
+hvrndiar.ani	=1
+hvrnhelp.ani	=1
+hvrnhorz.ani	=1
+hvrnlink.ani	=1
+hvrnmove.ani	=1
+hvrnno.ani	=1
+hvrno.ani	=1
+hvrnpen.ani	=1
+hvrnpen2.ani	=1
+hvrnvert.ani	=1
+hvrpen.ani	=1
+hvrpen2.ani	=1
+hvrvert.ani	=1
+hvwalt.ani	=1
+hvwapps1.ani	=1
+hvwapps2.ani	=1
+hvwapps3.ani	=1
+hvwapps4.ani	=1
+hvwapps5.ani	=1
+hvwarrow.cur	=1
+hvwbeam.cur	=1
+hvwbusy1.ani	=1
+hvwbusy2.ani	=1
+hvwbusy3.ani	=1
+hvwbusy4.ani	=1
+hvwbusy5.ani	=1
+hvwbusy6.ani	=1
+hvwcross.cur	=1
+hvwdiagl.ani	=1
+hvwdiagr.ani	=1
+hvwhelp.ani	=1
+hvwhorz.ani	=1
+hvwlink.ani	=1
+hvwlink.cur	=1
+hvwmove.ani	=1
+hvwno.ani	=1
+hvwpen.ani	=1
+hvwpen2.ani	=1
+hvwvert.ani	=1
+hvyalt.ani	=1
+hvyapps1.ani	=1
+hvyapps2.ani	=1
+hvyapps3.ani	=1
+hvyapps4.ani	=1
+hvyapps5.ani	=1
+hvyarrow.cur	=1
+hvybeam.cur	=1
+hvybusy1.ani	=1
+hvybusy2.ani	=1
+hvybusy3.ani	=1
+hvybusy4.ani	=1
+hvybusy5.ani	=1
+hvybusy6.ani	=1
+hvycross.cur	=1
+hvydiagl.ani	=1
+hvydiagr.ani	=1
+hvyhelp.ani	=1
+hvyhorz.ani	=1
+hvylink.ani	=1
+hvylink.cur	=1
+hvymove.ani	=1
+hvyno.ani	=1
+hvypen.ani	=1
+hvypen2.ani	=1
+hvyvert.ani	=1
+INSTALHV.INF	=1
+readme.txt	=1
